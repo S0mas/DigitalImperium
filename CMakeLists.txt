@@ -22,6 +22,7 @@ find_package(Qt5 COMPONENTS Core Quick Network Concurrent Multimedia LinguistToo
 set(TS_FILES gui/resources/translations/DigitalImperium_pl_PL.ts)
 set(SOURCES
     main.cpp
+    backend/source/mainGame.cpp
     gui/qml.qrc
     ${TS_FILES})
 
