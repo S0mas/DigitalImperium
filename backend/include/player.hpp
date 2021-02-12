@@ -7,8 +7,11 @@
 class Player {
     std::unique_ptr<Race> race_;
     std::vector<ActionCard> actionCards_;
-    int tokensInFleetPoolNo_ = 3;
-    int tokensInTacticPoolNo_ = 3;
-    int tokensInStrategyPoolNo_ = 2;
-    int tokensInReinforcementPoolNo_ = 8;
+    int tokensInFleetPool_ = 3;
+    int tokensInTacticPool_ = 3;
+    int tokensInStrategyPool_ = 2;
+    int tokensInReinforcementPool_ = 8;
+    int victoryPoints_ = 0;
+    int commodities_;
+    int tradeGoods_;
 };

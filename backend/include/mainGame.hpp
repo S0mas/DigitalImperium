@@ -7,6 +7,7 @@
 class MainGame {
 std::vector<std::unique_ptr<Phase>> phases_;
 std::vector<std::unique_ptr<Player>> players_;
+Player* speaker_;
 std::vector<Player*> orderedPlayersBySpeaker_;
 std::vector<Player*> orderedPlayersByInitiative_;
 
