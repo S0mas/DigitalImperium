@@ -1,5 +1,5 @@
 #pragma once
-#include "ability.hpp"
+#include "../../ability.hpp"
 
 class SustainDamage : public Ability {
     bool canSustainDamage_ = true;
@@ -12,5 +12,8 @@ public:
     }
     bool canSustainDamage() const noexcept {
         return canSustainDamage_;
+    }
+    std::unique_ptr<Ability> copy() const noexcept override {
+        return std::make_unique<SustainDamage>();
     }
 };

@@ -5,9 +5,15 @@
 class Carrier : public Ship {
 public:
     Carrier() {
-        capacity_ = 6;
-        cost_ = 3;
-        combat_ = 9;
-        move_ = 2;
+        attributes_.cost_ = 3;
+        attributes_.combat_ = 9;
+        attributes_.move_ = 1;
+        attributes_.capacity_ = 4;
+
+
+
+    }
+    std::unique_ptr<Unit> copy() const noexcept override {
+        return std::make_unique<Carrier>();
     }
 };

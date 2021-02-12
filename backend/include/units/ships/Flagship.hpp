@@ -4,10 +4,13 @@
 
 class Flagship : public Ship {
 public:
-    Flagship() {
-        capacity_ = 2;
-        cost_ = 8;
-        combat_ = 3;
-        move_ = 2;
+    Flagship(Attributes const attributes) {
+        setAttributes(attributes);
+    }
+    std::unique_ptr<Unit> copy() const noexcept override {
+        auto newShip = std::make_unique<Flagship>(attributes());
+        for(auto const& ability : abilities_)
+            newShip->addAbility(ability.first, ability.second->copy());
+        return newShip;
     }
 };

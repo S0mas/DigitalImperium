@@ -13,17 +13,16 @@
 
 #include <memory>
 
-class UnitsDetails {
-public:
-    std::unique_ptr<PSD> psd_;
-    std::unique_ptr<SpaceDock> spaceDock_;
-    std::unique_ptr<Mech> mech_;
-    std::unique_ptr<Infantry> infantry_;
-    std::unique_ptr<WarSun> warSun_;
-    std::unique_ptr<Flagship> flagship_;
-    std::unique_ptr<Dreadnought> dreadnought_;
-    std::unique_ptr<Cruiser> cruiser_;
-    std::unique_ptr<Destroyer> destroyer_;
-    std::unique_ptr<Carrier> carrier_;
-    std::unique_ptr<Fighter> fighter_;
+struct UnitsDetails {
+    PSD psd_;
+    SpaceDock spaceDock_;
+    Mech mech_;
+    Infantry infantry_;
+    WarSun warSun_;
+    Flagship flagship_;
+    Dreadnought dreadnought_;
+    Cruiser cruiser_;
+    Destroyer destroyer_;
+    Carrier carrier_;
+    Fighter fighter_;
 };

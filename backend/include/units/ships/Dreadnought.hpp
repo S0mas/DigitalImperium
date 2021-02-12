@@ -7,11 +7,14 @@
 class Dreadnought : public Ship {
 public:
     Dreadnought() {
-        capacity_ = 1;
-        cost_ = 4;
-        combat_ = 5;
-        move_ = 1;
+        attributes_.cost_ = 4;
+        attributes_.combat_ = 5;
+        attributes_.move_ = 1;
+        attributes_.capacity_ = 1;
         abilities_[Bombardment::key()] = std::make_unique<Bombardment>(1, 5);
         abilities_[SustainDamage::key()] = std::make_unique<SustainDamage>();
+    }
+    std::unique_ptr<Unit> copy() const noexcept override {
+        return std::make_unique<Dreadnought>();
     }
 };

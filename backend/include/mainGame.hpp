@@ -19,6 +19,8 @@ void updatePlayersOrderByInitiative() {
 
 }
 
+void createRaces() noexcept;
+
 void initPhases() {
     /// STRATEGY PHASE ////////////////////////////////////////////////////////////////////////////
     phases_.push_back(std::make_unique<PickingStrategyCardPhase>());

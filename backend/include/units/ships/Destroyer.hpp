@@ -6,10 +6,10 @@
 class Destroyer : public Ship {
 public:
     Destroyer() {
-        capacity_ = 0;
-        cost_ = 1;
-        combat_ = 9;
-        move_ = 2;
-        abilities_[AntiFighterBarrage::key()] = std::make_unique<AntiFighterBarrage>(3, 9);
+        attributes_.cost_ = 1;
+        attributes_.combat_ = 9;
+        attributes_.move_ = 2;
+        attributes_.capacity_ = 0;
+        abilities_[AntiFighterBarrage::key()] = std::make_unique<AntiFighterBarrage>(2, 9);
     }
 };
