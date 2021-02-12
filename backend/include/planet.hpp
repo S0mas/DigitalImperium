@@ -12,8 +12,7 @@ class Planet {
     int influence_ = 0;
     Trait trait_ = Trait::NONE;
     TechnologyType technologyType_ = TechnologyType::NONE;
-    std::vector<EnchantmentCard> enchantments
-    _;
+    std::vector<EnchantmentCard> enchantments_;
 public:
     Planet(std::string const& name, std::string const& lore, int const production, int const influence, Trait const trait) noexcept
         : name_(name), lore_(lore), production_(production), influence_(influence), trait_(trait) {}
